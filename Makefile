@@ -66,7 +66,7 @@ sandbox_load_data: ## Import fixtures and collect static
 	sandbox/manage.py collectstatic --noinput
 
 sandbox_image: ## Build latest docker image of django-oscar-sandbox
-	docker build -t django-oscar-sandbox:latest .
+	docker build -t sirisha7474/wallymart:latest .
 
 ##################
 # Tests and checks
