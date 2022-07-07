@@ -27,6 +27,17 @@ docker run -p 8080:8080 sirisha7474/wallymart:latest
 
 Create Super user
 
-```docker ps
+```
+docker ps
 docker ps | grep wallymart | awk '{print  $1 " python manage.py createsuperuser --username siri --email siri@example.com"}' | xargs -o docker exec -it  
+```
+
+## Develop Locally using python setup
+
+```
+virtualenv wallymart
+ . ./wallymart/bin/activate
+pip install django-oscar sorl-thumbnail
+python manage.py migrate
+python manage.py runserver
 ```
