@@ -32,6 +32,8 @@ docker ps
 docker ps | grep wallymart | awk '{print  $1 " python manage.py createsuperuser --username siri --email siri@example.com"}' | xargs -o docker exec -it  
 ```
 
+go to http://localhost:8080
+
 ## Develop Locally using python setup
 
 ```
@@ -41,3 +43,4 @@ pip install django-oscar sorl-thumbnail
 python manage.py migrate
 python manage.py runserver
 ```
+go to http://127.0.0.1:8000
